@@ -3,6 +3,13 @@ import './App.css';
 
 let Hello = <><h1>Hello World!</h1></>
 
+function Name(param){
+   param = "Jhon"
+  return(
+    <h1>Hello {param}</h1>
+  )
+}
+
 function App() {
   return (
     <div className="App">
@@ -21,6 +28,7 @@ function App() {
         </a>
       </header>
       {Hello}
+      <Name/>
     </div>
   );
 }
