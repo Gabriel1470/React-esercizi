@@ -4,7 +4,7 @@ export class Age extends React.Component{
   render(){
     return(
     <>
-    {(this.props.age >= 18) && <h1>your age is: {this.props.age}</h1>}
+   <h1>Your age is:{this.props.age}</h1>
     </>
     )
   }

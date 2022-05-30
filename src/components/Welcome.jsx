@@ -5,7 +5,11 @@ export class Welcome extends React.Component{
   render(){
     return(
       <>
-      <Age age={16}/>
+      {/* esercizio 01 */}
+       {(this.props.age >= 18) && <Age age= {this.props.age}/>}
+       {/* esercizio 02 */}
+    {!!(this.props.age) && <Age age= {this.props.age}/>}
+   
       </>
     )
   }
