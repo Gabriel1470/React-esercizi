@@ -4,7 +4,7 @@ import { Welcome } from "./components/Welcome";
 function App() {
   return (
     <div>
-      <Welcome age={45} name='Jhon'/>
+      <Welcome age={16} name='Jhon'/>
     </div>
   );
 }

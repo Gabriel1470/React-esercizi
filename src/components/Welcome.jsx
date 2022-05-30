@@ -12,7 +12,12 @@ export class Welcome extends React.Component{
     {/* esercizio 03 */}
     {/* {(this.props.age > 18 ) && (this.props.age < 65 ) && <Age age={this.props.age}/>} */}
     {/* esercizio 04 */}
-    {(this.props.age > 18 ) && (this.props.age < 65 ) && (this.props.name === 'Jhon') && <Age age={this.props.age}/>}
+   {/*  {(this.props.age > 18 ) && (this.props.age < 65 ) && (this.props.name === 'Jhon') && <Age age={this.props.age}/>} */}
+   {/* esercizio 05 */}
+   {this.props.age >= 18
+    ?  <Age age={this.props.age}/>
+    : <h1>You are very young!</h1>
+   }
       </>
     )
   }
