@@ -8,7 +8,7 @@ import React from "react";
       
 
         {!! this.props.name  && <h1>Welcome, {this.props.name}!</h1> }
-       {!! this.props.age && <h1>you are {this.props.age}</h1>}
+       {!! this.props.age && <p>Your age is {this.props.age}</p>}
      
       </div>
     )
