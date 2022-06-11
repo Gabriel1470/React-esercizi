@@ -1,9 +1,10 @@
-import { Counter } from "./components/Counter";
+
+import { CounterDisplay } from "./components/CounterDisplay";
 
 function App() {
   return (
     <div>
-    <Counter initValue={0} increment={3} interval={500} />
+    <CounterDisplay initValue={0} increment={3} interval={500} />
     </div>
   );
 }
