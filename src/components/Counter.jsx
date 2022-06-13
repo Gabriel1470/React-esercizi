@@ -5,17 +5,20 @@ state = {
   count: this.props.initValue ?? 0,
 }
 
-
-  constructor(props){
-   super(props)
-
-     setInterval(()=>{
+componentDidMount(){
+setInterval(()=>{
          this.setState((state)=>{
           return{ count: state.count + (this.props.increment ?? 1)}
            })
            }, (this.props.interval ?? 1000))
+}
 
-  }
+ /*
+ Effettivamente divento inutile
+ 
+ constructor(props){
+   super(props)
+  } */
 
   render(){
    return (
