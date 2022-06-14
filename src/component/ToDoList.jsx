@@ -2,7 +2,7 @@ import React from "react";
 import { createRef } from "react";
 
 export class ToDoList extends React.Component{
-inpt = createRef()
+input = createRef()
 state = {
   item:['maserati','audi','bmw','fiat',],
   addItem:''
