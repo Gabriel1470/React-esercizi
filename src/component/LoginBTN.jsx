@@ -28,6 +28,15 @@ onLogin=()=>{
   console.log(this.state)
 }
 
+onReset=()=>{
+  this.setState({
+    password:'',
+    username: '',
+    remember: false,
+    login: true,
+  })
+}
+
   render(){
     return(
    <div>
@@ -37,7 +46,7 @@ onLogin=()=>{
 <input type="password" name="password" value={this.state.password} onChange={this.imputHandler} />
 <input type="checkbox" name="remember" value={this.state.remember} onChange={this.imputHandler} />
 <button type='submit' disabled={this.state.login} onClick={this.onLogin}>Login</button>
-
+<button onClick={this.onReset}>Reset</button>
    </div>
     )
   }
