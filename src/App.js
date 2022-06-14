@@ -1,5 +1,6 @@
 import { InteractiveWelcome } from "./component/InteractiveWelcome";
 import { Login } from "./component/Login";
+import { LoginBTN } from "./component/LoginBTN";
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
     <InteractiveWelcome/>
     <Login/>
+    <LoginBTN/>
     </div>
   );
 }
