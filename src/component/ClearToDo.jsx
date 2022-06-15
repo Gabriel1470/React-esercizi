@@ -10,13 +10,12 @@ export class ClearToDo extends React.Component {
 
     saveHandler = (event) => this.setState({ value: event.target.value });
     pushHandler = (event) => {
+       
         this.setState((state) => {
 
             return {
-                todos: state.todos.concat(this.state.value),
+                item: state.item.concat(this.state.value),
                 value: state.value=''
-
-
             }
         })
     }
@@ -32,7 +31,7 @@ export class ClearToDo extends React.Component {
                             <li key={index}>{item}</li>
                         )
                     })}
-                    <input type="text" name='inputin' value={this.state.value}onChange={this.saveHandler}></input>
+                    <input type="text" name='inputin' value={this.state.value} onChange={this.saveHandler}></input>
                     <button  onClick={this.pushHandler}>
                         Add
                     </button>
