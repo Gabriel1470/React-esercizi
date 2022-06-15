@@ -5,8 +5,8 @@ import { Container } from './component/Container';
 function App() {
   return (
     <div>
-      <Container>
-        
+      <Container title="Sono un titolo bello!">
+<p>Sono il contenuto</p>
       </Container>
     </div>
   );
