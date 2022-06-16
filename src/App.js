@@ -24,8 +24,7 @@ function App() {
                 
             </ul>
             
-                <input type="text" value={addItem} onChange={eventHandler()} />
-                <button onClick={()=>{saveHandler()}}>Add Item</button>
+              
                 </div>
           )})}
      </UlProps>

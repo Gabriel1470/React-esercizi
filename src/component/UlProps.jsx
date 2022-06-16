@@ -16,7 +16,7 @@ export class UlProps extends React.Component{
       })
   }
 
-  eventHandler = (event) => {
+  eventHandler = () => {
 
     this.setState((state) => {
       console.log()
@@ -27,7 +27,7 @@ export class UlProps extends React.Component{
   saveHandler = () => {
     this.setState((state) => {
       console.log()
-      return { item: state.list.concat(this.state.addItem) }
+      return { list: state.list.concat(this.state.addItem) }
     })
   }
 
