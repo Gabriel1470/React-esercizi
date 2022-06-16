@@ -8,7 +8,7 @@ function App() {
     <div>
       <Welcome  name={<strong>Jhon</strong>} age={23}/>
 
-      <Sum numbers={[2,4,5,78,6,43,234]}/>
+      <Sum numbers={['']}/>
     </div>
   );
 }
