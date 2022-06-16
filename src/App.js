@@ -3,7 +3,7 @@ import './App.css';
 import DisplayLanguage from './Components/DisplayLenguage';
 import { LanguageContext,Language } from './Components/LanguageContext';
 
-
+/* Non HO capito context 02 */
 
 export class App extends React.Component   {
        state = {
