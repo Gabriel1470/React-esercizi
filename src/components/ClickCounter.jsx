@@ -1,22 +1,29 @@
 import React from "react";
-import { useState } from "react";
+import {useState, useEffect } from "react";
 
 
 
-export function ClickCounter({initialValue = 0}){
-  const [clock,setCounter ]= useState(initialValue)
 
- function handleIncrement() {
-    setCounter(c => c+1)
-  }
+export function ClickCounter({ initialValue = 0, onCounterChange }) {
+  const [clock, setCounter] = useState(initialValue)
+
+  useEffect(() => {
+    onCounterChange(clock)
+  })
 
 
-    return (
-      <div>
-        <h1>Clock:{clock}</h1>
-        <button onClick={handleIncrement}>Increment</button>
-      </div>
-    )
-  
+
+    function handleIncrement(){
+     return(setCounter(clock + 1))
+    }
+
+    return(
+
+    <div>
+      <h1>Clock:{clock}</h1>
+      <button onClick={handleIncrement}>Increment</button>
+    </div>
+  )
+
 
 }

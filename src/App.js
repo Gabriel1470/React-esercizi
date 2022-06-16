@@ -4,10 +4,15 @@ import { Login } from "./components/Login";
 
 
 function App() {
+  function onCounterChange(clock){
+    console.log(`The state now is ${clock}`)
+  }
+
+
   return (
     <div>
       <Login/>
-    <ClickCounter initialValue={5}/>
+    <ClickCounter onCounterChange={onCounterChange}/>
     </div>
   );
 }
