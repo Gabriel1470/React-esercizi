@@ -1,10 +1,11 @@
 
-import { CounterDisplay } from "./components/CounterDisplay";
+import { ClickCounter } from "./components/ClickCounter";
+
 
 function App() {
   return (
     <div>
-    <CounterDisplay initValue={0} increment={3} interval={500} />
+    <ClickCounter initialValue={5}/>
     </div>
   );
 }
