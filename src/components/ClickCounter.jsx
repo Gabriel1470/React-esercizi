@@ -4,24 +4,33 @@ import {useState, useEffect } from "react";
 
 
 
-export function ClickCounter({ initialValue = 0, onCounterChange }) {
+export function ClickCounter({ initialValue = 0}) {
+ 
+
+
   const [clock, setCounter] = useState(initialValue)
+  const intHandler = ()=> setInterval(()=>{
+            setCounter(clock + 1)
+        },500)
+
+
+
+useEffect(()=>{
+  intHandler()
+},[])
+
 
   useEffect(() => {
-    onCounterChange(clock)
-  })
-
-
-
-    function handleIncrement(){
-     return(setCounter(clock + 1))
+    return()=>{
+      clearInterval(intHandler)
+      console.log('Component reset')
     }
+  },[clock])
 
     return(
 
     <div>
       <h1>Clock:{clock}</h1>
-      <button onClick={handleIncrement}>Increment</button>
     </div>
   )
 
