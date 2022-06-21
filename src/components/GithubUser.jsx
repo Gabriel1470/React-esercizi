@@ -2,7 +2,7 @@ import { useEffect , useState } from "react";
 
 export function GithubUser({username}){
 
-const [dati,setDati] = useState('')
+const [dati,setDati] = useState('username')
 const [err,setErr] = useState(false)
 
 async function userFetch() {
