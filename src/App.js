@@ -1,29 +1,25 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './App.css';
 import DisplayLanguage from './Components/DisplayLenguage';
-import { LanguageContext,Language } from './Components/LanguageContext';
+import LanguageContext,{ Language } from './Components/LanguageContext';
 
 /* Non HO capito context 02 */
 
-export class App extends React.Component   {
-       state = {
-    language: 'it'
-  }
+export function App(){
+   const [language, setLanguage] = useState('en')
 
-  selectHandler = (event) => {
-    this.setState((state) => {
-      return { language: state.language = event.target.value }
-    })
-  };
+   function selectHandler(event){
+    setLanguage(event.target.value)
+ }
 
-  render(){
+ 
     return (
       <div>
-        <select value={this.state.language} onChange={this.selectHandler}>
+        <select value={language} onChange={selectHandler}>
           <option value='en'>ENGLISH</option>
           <option value='it'>ITALIANO</option>
         </select>
-        <Language.Provider value={this.state.language}>
+        <Language.Provider value={language}>
           <DisplayLanguage>
             <LanguageContext />
           </DisplayLanguage>
@@ -31,6 +27,6 @@ export class App extends React.Component   {
       </div >
     );
   }
-}
+
 
 export default App;

@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import React from "react";
+import { useContext } from "react";
 
 export const Language = createContext('en') 
 
@@ -11,9 +12,9 @@ const strings = {
       WELCOME: "Welcome! Please see the inventory of weapons as well?"
   }
 }
-export class LanguageContext extends React.Component {
-  render() {
+export default function LanguageContext(){
 
+const language = useContext(LanguageContext)
 
       return (
           <Language.Consumer>
@@ -27,7 +28,7 @@ export class LanguageContext extends React.Component {
           </Language.Consumer>
       )
   }
-}
+
 
 
 
