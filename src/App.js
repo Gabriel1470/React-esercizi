@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import FilterdList from "./Components/FilteredList";
+import { useState } from "react";
 function App() {
+ const [list, setList] = useState([{
+  id: 1,
+  name: 'Gulius',
+  age: 7
+}, {
+  id: 2,
+  name: 'Golias',
+  age: 22
+},
+{
+  id: 3,
+  name: 'Frodum',
+  age: 19
+},
+{
+  id: 4,
+  name: 'Valkir',
+  age: 4
+}])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+<FilterdList list={list}/>
     </div>
   );
 }
