@@ -1,13 +1,15 @@
 import { useEffect , useState } from "react";
+import { useParams } from "react-router-dom";
 
-export function GithubUser({name}){
-
+export function GithubUser(){
+const {username} = useParams()
 const [dati,setDati] = useState('')
 const [err,setErr] = useState(false)
 
 async function userFetch() {
   try {
-    const response = await fetch(`https://api.github.com/users/${name}`);
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    console.log(username)
     if(response.status === 200){
       const info = await response.json()
       setDati(info)
@@ -22,7 +24,7 @@ throw new Error('User inesistente/impossibile comunicare con il server')
 
 useEffect(()=>{
   userFetch()
-}, [])
+},[username] )
 
 
 return(
