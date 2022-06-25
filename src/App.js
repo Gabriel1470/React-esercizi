@@ -17,6 +17,7 @@ function App() {
         <Route path='/githubuser'>
           <Route path=':username' element={<UserHandler />} />
         </Route>
+        <Route path='*' element={<h1>Error 404</h1>}></Route>
       </Routes>
     </div>
   );
