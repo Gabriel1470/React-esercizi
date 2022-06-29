@@ -2,7 +2,7 @@ import useFetch from "./useFetch"
 
 export default function GithubUserProvider({username}){
 
-const {data,error,isLoading,isValid} = useFetch(username)
+const {data,error,isLoading,isValid,manualFetch} = useFetch(username)
 
     return(
         <>
@@ -11,7 +11,8 @@ const {data,error,isLoading,isValid} = useFetch(username)
     {isLoading && <h1>Loading..</h1>}
     {error && <h1>{error.message}</h1>}
     {data && <div><h1>{data.login}</h1>
-    <img src={data.avatar_url}></img></div>}
+    <img src={data.avatar_url}></img>
+    <button onClick={manualFetch}>Manual fetch</button></div>}
     {!isValid && <h1>Fetch bloccata</h1>}
         </>
     )

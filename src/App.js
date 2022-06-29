@@ -1,5 +1,5 @@
 import { useState} from 'react'; 
-import { SWRConfig } from 'swr';
+import {mutate, SWRConfig } from 'swr';
 import './App.css';
 import GithubUserProvider from './Components/GithubUserProvider';
 const array=['Gabriel1470']
