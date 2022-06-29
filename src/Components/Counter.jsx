@@ -10,17 +10,17 @@ export function Counter(){
 
   const increment = () => {
     store.dispatch(incrementCounter(1))
-    setCounter(store.getState())
+    setCounter(store.getState().counter)
   }
 
   const decrement = () => {
     store.dispatch(decrementCounter(1))
-    setCounter(store.getState())
+    setCounter(store.getState().counter)
   }
 
   const reset = () => {
     store.dispatch(resetCounter(1))
-    setCounter(store.getState())
+    setCounter(store.getState().counter)
   }
 
   return(
