@@ -6,7 +6,7 @@ const rootReducer=combineReducers({
   counter: CounterReducer,
   todo: todoReducer
 })
-/* fatto redux 04 senza saperlo */
+/* fatto redux 04 senza saperlo stessa cosa per il 05 lol*/
 export const store = createStore(rootReducer)
 
 store.subscribe(()=>{console.log(store.getState())})
